@@ -1,0 +1,27 @@
+/* KVM */
+[
+    {
+        "label": "ubuntu-22.04-nks-wknd", 
+        "value": "SW.VSVR.OS.LNX64.UBNTU.SVR22.WRKND.G003|3434193"
+    },
+    {
+        "label": "ubuntu-20.04-nks",
+        "value": "SW.VSVR.OS.LNX64.UBNTU.SVR20.WRKND.G003|3063991"
+    },
+    {
+        "label": "ubuntu-22.04-gpu-wknd",
+        "value": "SW.VSVR.OS.LNX64.UBNTU.SVR22.WRKND.G003|3466796"
+    }
+]
+
+/* ZEN */
+[
+    {
+        "label": "ubuntu-20.04-64-server",
+        "value": "SW.VSVR.OS.LNX64.UBNTU.SVR2004.WRKND.B050"
+    },
+    {
+        "label": "ubuntu-18.04-64-server",
+        "value": "SW.VSVR.OS.LNX64.UBNTU.SVR1804.WRKND.B050"
+    }
+]
