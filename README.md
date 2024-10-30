@@ -40,6 +40,10 @@
 
 ### 3) `terraform.tfvars` 파일 커스터마이징  
 1. IAM 추가  
+    - `site` 설정
+        - default는 `pub` 으로 **민간존**임
+        - 공공존 : `gov`
+        - 금융존 : `fin`
     - access key와 secret key를 알맞는 것으로 변경  
     - 보안을 위해서 api key를 `.tfvars` 파일에 집어넣지 않고, `terraform apply` 시 입력할 수도 있음
 2. service name 설정  
@@ -89,7 +93,7 @@
     - `ncloud_nks_server_images` : ubuntu-22.04 | ubuntu-20.04 (gpu version도 존재)
     - `ncloud_nks_server_products`
         - `product_type` : HICPU | STAND | HIMEM 에 따라 아래 CPU 와 MEM size가 달라짐
-        - `cpu_conut`
+        - `cpu_count`
         - `memory_size`
         - 일치하는 값을 찾지 못하면 `terraform plan` 시 error가 발생하므로 주의해야 함
 

@@ -1,8 +1,10 @@
 # IAM 설정
-# ### clabigovpoc (공공)
+# ### 공공
+# site = "gov"
 # ncloud_access_key = ""
 # ncloud_secret_key = ""
-### clabi (민간)
+### 민간
+site = "pub"
 ncloud_access_key = ""
 ncloud_secret_key = ""
 

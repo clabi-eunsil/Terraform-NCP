@@ -16,6 +16,12 @@ variable "region" {
   default     = "KR"  # 기본값을 설정했지만 필요에 따라 변경 가능
 }
 
+variable "site" {
+  description = "Ncloud Site"
+  type        = string
+  default     = "public"  # pub | gov | fin
+}
+
 variable "zone" {
   description = "Availability zone"
   type        = string
