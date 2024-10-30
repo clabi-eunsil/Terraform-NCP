@@ -194,7 +194,7 @@ ssh clabi@<bastion 공인 IP>
 
     k9s # 정상 접근 확인
     ```
-    ![]()
+    ![](./source/png/check-cmd.png)
 ## 04. ArgoCD 설치
 ### 1) console 상에서의 설정
 - SSL 인증서 등록
