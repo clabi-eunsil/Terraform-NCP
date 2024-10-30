@@ -71,17 +71,34 @@
     - default로 clabi IP가 22번 port (ssh) 로 허용됨  
     - 필요에 따라 `client_ip`를 주석해제하여 clabi IP가 아닌 별도의 IP를 허용할 수 있음  
         (*ver 0.1에서는 기본적으로 1개의 IP에 한하여 인바운드 허용 가능*)
-6. worker node 갯수 정의
-    - default 1개 
+6. worker node 설정
+    - 갯수 : default 1개 
+    - storage size : default 100GB (100GB 이상 설정 가능)
 
 
-### 4) `main.tf` 파일 커스터마이징
+### 4) `data.tf` 파일 커스터마이징
+1. bastion 서버 스펙 설정  
+    - `server_image_name` : ubuntu-22.04-base | rocky-8.10-base | ubuntu-20.04-base | etc... 
+    - `server_spec_code` 
+        - c2-g3 \| c4-g3 \| c8-g3 ... (High-CPU) 
+        - s2-g3 \| s4-g3 \| s8-g3 ... (Stardard) 
+        - m2-g3 ... (High-Memory)  etc...
+2. NKS cluster 버전 설정
+    - `ncloud_nks_version` 의 `values` 값을 원하는 version으로 설정해줄 수 있음
+3. NKS worker node 스펙 설정
+    - `ncloud_nks_server_images` : ubuntu-22.04 | ubuntu-20.04 (gpu version도 존재)
+    - `ncloud_nks_server_products`
+        - `product_type` : HICPU | STAND | HIMEM 에 따라 아래 CPU 와 MEM size가 달라짐
+        - `cpu_conut`
+        - `memory_size`
+        - 일치하는 값을 찾지 못하면 `terraform plan` 시 error가 발생하므로 주의해야 함
 
 ## 02. Terraform 실행
 ### 1) `terraform init`
 ```sh
 # terraform code가 있는 디렉터리로 이동
 cd ./Terraform/ver0.2  
+
 # terraform init 실행
 terraform init
 ```
