@@ -70,16 +70,65 @@ variable "pri_db_subnet_cidr" {
   default     = null  # Optional if a DB subnet is not always needed
 }
 
+# Hypervisor 설정
+variable "hypervisor_type" {
+  description = "The type of hypervisor"
+  type        = string
+  default     = "KVM"
+}
 
+# server 정의
 variable "bastion_init_script_path" {
   description = "Path to the local init script file"
   type        = string
+}
+
+variable "server_image_name" {
+  description = "The name of the server image"
+  type        = string
+  default     = "ubuntu-22.04-base"
+}
+
+variable "server_spec_code" {
+  description = "The server specification code"
+  type        = string
+  default     = "c2-g3"
 }
 
 variable "client_ip" {
   description = "Inbound IP blocks to allow for the Bastion server"
   type        = string
   default     = "1.209.229.248/32" #clabi
+}
+
+# NKS 정의
+variable "nks_version" {
+  description = "The NKS version"
+  type        = string
+  default     = "1.29"
+}
+
+variable "node_image" {
+  description = "The label for the NKS server image"
+  type        = string
+  default     = "ubuntu-22.04"
+}
+variable "node_product_type" {
+  description = "The product type for NKS server products"
+  type        = string
+  default     = "HICPU"
+}
+
+variable "node_cpu_core" {
+  description = "Number of CPUs"
+  type        = string
+  default     = "2"
+}
+
+variable "node_memory_size" {
+  description = "Memory size"
+  type        = string
+  default     = "4GB"
 }
 
 variable "node_count" {
