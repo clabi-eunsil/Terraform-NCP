@@ -1,7 +1,5 @@
 #!/bin/bash
 
-###### ZEN 을 사용할 경우, ingress controller 설치를 위해 74,75번 line의 주석 해제 필요 ######
-
 ###### Access Key, Cluster UUID 먼저 확인 필요 ######
 
 # 사용자 입력 받기
@@ -9,12 +7,12 @@ read -p "Enter your Ncloud Access Key ID: " NCP_ACCESS_KEY_ID
 read -p "Enter your Ncloud Secret Access Key: " NCP_SECRET_ACCESS_KEY
 read -p "Enter your Cluster UUID: " CLUSTER_UUID
 
-# 공공(private)/민간(public) 선택
-echo "Is this a public or private environment? Enter 'public' or 'private': "
+# 공공(gov)/민간(pub) 선택
+echo "Is this a public or government environment? Enter 'pub' or 'gov': "
 read ENVIRONMENT
 
 # ncloud_api_url 설정
-if [[ $ENVIRONMENT == "private" ]]; then
+if [[ $ENVIRONMENT == "gov" ]]; then
   NCP_API_URL="https://ncloud.apigw.gov-ntruss.com"
 else
   NCP_API_URL="https://ncloud.apigw.ntruss.com"
