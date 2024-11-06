@@ -1,10 +1,5 @@
 # IAM 설정
-# ### 공공
-# site = "gov"
-# ncloud_access_key = ""
-# ncloud_secret_key = ""
-### 민간
-site = "pub"
+site = "pub" # 민간 (공공은 "gov")
 ncloud_access_key = ""
 ncloud_secret_key = ""
 
