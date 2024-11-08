@@ -5,8 +5,8 @@
 # ncloud_secret_key = ""
 ### 민간
 site              = "pub"
-ncloud_access_key = "BB80DFE5A5F5EA2974B4"
-ncloud_secret_key = "0AC77B48786E52B08228ADCEB5E8898C26935470"
+ncloud_access_key = ""
+ncloud_secret_key = ""
 
 # service 이름 설정
 service_name = "tf-test"
