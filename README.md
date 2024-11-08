@@ -145,3 +145,12 @@ terraform destroy
     ├── rocky-init.sh       # rocky linux 초기 설정을 위한 script
     └── ubuntu-init.sh      # ubuntu 초기 설정을 위한 script
 ```
+
+### To Do
+- [x] ~~KVM으로 upgrade~~  
+    - ver0.2 적용
+- [x] ~~variavles.tf 만 user가 변경~~
+    - ver 0.2 적용
+- [x] ~~main.tf 분리~~
+    - ver 0.3 적용
+- [ ] bastion 설정 일괄 적용  
