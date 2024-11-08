@@ -27,7 +27,7 @@ hypervisor_type = "KVM" # default
 server_image_name = "ubuntu-22.04-base" # ex: rocky-8.10-base, ubuntu-20.04-base ...
 server_spec_code  = "c2-g3"             # ex: c4-g3, s2-g3, s4-g4 ...
 
-bastion_init_script_tpl = "../source/sh/bastion.tpl"
+bastion_init_script_tpl = "./template/bastion-init-script.tpl"
 # client_ip = "1.209.x.x/32" # 다른 IP로 대치 가능
 
 # NKS 설정
